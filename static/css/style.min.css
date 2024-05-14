@@ -123,7 +123,6 @@ h6 {
 }
 #f3a8cf
 */
-/* Genel stiller */
 body {
   background: #2ec3eb;
 }
@@ -139,12 +138,16 @@ body._lock {
   flex-direction: column;
 }
 ._container {
-  max-width: 100%; /* Değişiklik */
+  max-width: 1920px;
   margin: 0 auto;
-  padding: 0px 20px; /* Değişiklik */
+  padding: 0px 100px;
+}
+@media (max-width: 998px) {
+  ._container {
+    padding: 0px 20px;
+  }
 }
 
-/* Buton stilleri */
 .button {
   display: inline-flex;
   padding: 0px 0px;
@@ -153,7 +156,6 @@ body._lock {
   width: 100%;
 }
 
-/* Seçenek kutusu stilleri */
 .select {
   position: relative;
   color: #858FA4;
@@ -175,6 +177,7 @@ body._lock {
   justify-content: space-between;
   flex-direction: row-reverse;
   line-height: 140%;
+  /* identical to box height, or 20px */
   text-align: right;
   color: #858FA4;
 }
@@ -201,13 +204,24 @@ body._lock {
   min-width: 100%;
   left: 0;
   border-top: 0;
+  border-top: 0;
   font-size: 14px;
   padding: 10px 0px 5px 0px;
+}
+@media (max-width: 991.98px) {
+  .select__options {
+    font-size: 18px;
+  }
 }
 .select__option {
   cursor: pointer;
   padding: 5px 15px;
   margin: 0px 0px 0px 0px;
+}
+@media (min-width: 992px) {
+  .select__option:hover {
+    background: #d9d9d9;
+  }
 }
 .select._active {
   z-index: 5;
@@ -219,7 +233,6 @@ body._lock {
   display: block;
 }
 
-/* Giriş alanı stilleri */
 input[type=text],
 input[type=email],
 input[type=tel],
@@ -244,18 +257,6 @@ textarea:focus {
 textarea.input {
   resize: none;
   padding: 0px 0px;
-}
-
-/* Ekstra stiller mobil uyumluluğu sağlamak için */
-@media (max-width: 991.98px) {
-  .select__options {
-    font-size: 18px;
-  }
-}
-@media (min-width: 992px) {
-  .select__option:hover {
-    background: #d9d9d9;
-  }
 }
 
 .checkbox {
@@ -842,7 +843,7 @@ body.ie ._ibg img {
   transform: scale(1.15);
 }
 .header__container {
-  display: flex;
+  display: ruby-text;
   justify-content: center;
   align-items: center;
   gap: 140px;
@@ -1104,7 +1105,7 @@ body.ie ._ibg img {
   }
 }
 .kaom__name {
-  position: absolute;
+  position: inherit;
   top: 2%;
   left: 24%;
   transform: rotate(15.842deg);
@@ -1147,7 +1148,7 @@ body.ie ._ibg img {
 @media (max-width: 998px) {
   .kaom__img {
     width: 270%;
-    transform: translate(-45%);
+    transform: translate(-56%);
   }
 }
 .kaom__contract {
