@@ -1036,6 +1036,7 @@ body.ie ._ibg img {
     transform: translate(-50%) scale(1);
   }
 }
+
 .kaom__text {
   display: flex;
   flex-direction: column;
